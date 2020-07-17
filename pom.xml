@@ -22,7 +22,7 @@
         <bukkit.plugin.description>${project.description}</bukkit.plugin.description>
         
         <bukkit.plugin.main>com.SirBlobman.hook.us.sgp.HookPlugin</bukkit.plugin.main>
-        <bukkit.plugin.version>2.0.0</bukkit.plugin.version>
+        <bukkit.plugin.version>2.0.1</bukkit.plugin.version>
         <bukkit.plugin.author>SirBlobman</bukkit.plugin.author>
     </properties>
     
@@ -31,12 +31,6 @@
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        
-        <!-- Songoda Public Repository -->
-        <repository>
-            <id>songoda-public</id>
-            <url>http://repo.songoda.com/artifactory/public/</url>
         </repository>
     </repositories>
     
@@ -50,18 +44,12 @@
         </dependency>
         
         <!-- UltimateStacker -->
+        <!-- Requires local installation -->
         <dependency>
             <groupId>com.songoda</groupId>
             <artifactId>UltimateStacker</artifactId>
-            <version>1.10.20</version>
+            <version>1.11.19</version>
             <scope>provided</scope>
-            
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         
         <!-- ShopGUIPlus -->
@@ -69,7 +57,7 @@
         <dependency>
             <groupId>net.brcdev</groupId>
             <artifactId>ShopGUIPlus</artifactId>
-            <version>1.32.1</version>
+            <version>1.38.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

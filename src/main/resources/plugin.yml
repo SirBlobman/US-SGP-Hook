@@ -7,6 +7,6 @@ version: "${bukkit.plugin.version}"
 authors:
   - "${bukkit.plugin.author}"
 
-softdepend:
+depend:
   - "ShopGUIPlus"
   - "UltimateStacker"
