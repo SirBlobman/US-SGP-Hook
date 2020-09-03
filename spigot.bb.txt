@@ -12,7 +12,7 @@ This plugin adds support for UltimateStacker mob spawners into ShopGUIPlus
 
 [SIZE=5][COLOR=#FF0000][B]Guide:[/B][/COLOR][/SIZE]
 If you want to know how to add a spawner, follow the guide on this page:
-[URL="https://wiki.brcdev.net/ShopGUIPlus/Installation_%26_configuration#Mob_spawners"]BRC Wiki - ShopGUIPlus Mob Spawners[/URL]
+[URL="https://docs.brcdev.net/#/shopgui/shops-items-setup?id=mob-spawners"]BRC Wiki - ShopGUIPlus Mob Spawners[/URL]
 
 [SIZE=5][B][COLOR=#FF0000]Support:[/COLOR][/B][/SIZE]
 If you need a feature added or are having issues, please join my discord by clicking the image below:
