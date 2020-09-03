@@ -20,10 +20,6 @@ public final class HookProvider implements ExternalSpawnerProvider {
         this.plugin = Objects.requireNonNull(plugin, "plugin must not be null!");
     }
     
-    public HookPlugin getHookPlugin() {
-        return this.plugin;
-    }
-    
     public void register() {
         ShopGuiPlusApi.registerSpawnerProvider(this);
     }
@@ -42,13 +38,14 @@ public final class HookProvider implements ExternalSpawnerProvider {
     @Override
     public EntityType getSpawnerEntityType(ItemStack item) {
         if(item == null) return null;
-        
         ItemMeta meta = item.getItemMeta();
         if(!(meta instanceof BlockStateMeta)) return null;
+
         BlockStateMeta stateMeta = (BlockStateMeta) meta;
-        
         BlockState state = stateMeta.getBlockState();
         if(!(state instanceof CreatureSpawner)) return null;
-        return ((CreatureSpawner) state).getSpawnedType();
+
+        CreatureSpawner spawner = (CreatureSpawner) state;
+        return spawner.getSpawnedType();
     }
 }
