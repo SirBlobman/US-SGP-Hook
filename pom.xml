@@ -22,7 +22,7 @@
         <bukkit.plugin.description>${project.description}</bukkit.plugin.description>
         
         <bukkit.plugin.main>com.SirBlobman.hook.us.sgp.HookPlugin</bukkit.plugin.main>
-        <bukkit.plugin.version>2.1.0</bukkit.plugin.version>
+        <bukkit.plugin.version>2.1.1</bukkit.plugin.version>
         <bukkit.plugin.author>SirBlobman</bukkit.plugin.author>
     </properties>
     
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>com.songoda</groupId>
             <artifactId>UltimateStacker</artifactId>
-            <version>2.0.4</version>
+            <version>2.0.7</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -63,7 +63,7 @@
         <dependency>
             <groupId>net.brcdev</groupId>
             <artifactId>ShopGUIPlus</artifactId>
-            <version>1.42.1</version>
+            <version>1.43.0</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
