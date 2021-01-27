@@ -1,4 +1,4 @@
-package com.SirBlobman.hook.us.sgp;
+package com.github.sirblobman.hook.ultimatestacker.shopguiplus;
 
 import java.util.Objects;
 
