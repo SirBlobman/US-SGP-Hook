@@ -67,7 +67,7 @@
         <!-- UltimateStacker -->
         <dependency>
             <groupId>com.songoda</groupId>
-            <artifactId>ultimatestacker</artifactId>
+            <artifactId>UltimateStacker</artifactId>
             <version>2.1.1</version>
             <scope>provided</scope>
             <exclusions>
