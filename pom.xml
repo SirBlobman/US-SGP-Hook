@@ -22,7 +22,7 @@
         <bukkit.plugin.description>${project.description}</bukkit.plugin.description>
         
         <bukkit.plugin.main>com.github.sirblobman.hook.ultimatestacker.shopguiplus.HookPlugin</bukkit.plugin.main>
-        <bukkit.plugin.version>3.0.0</bukkit.plugin.version>
+        <bukkit.plugin.version>3.0.1</bukkit.plugin.version>
         <bukkit.plugin.author>SirBlobman</bukkit.plugin.author>
     </properties>
     
@@ -31,6 +31,12 @@
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        
+        <!-- SirBlobman Private Repository -->
+        <repository>
+            <id>sirblobman-private</id>
+            <url>https://nexus.sirblobman.xyz/repository/private/</url>
         </repository>
 
         <!-- Songoda Public Repository -->
@@ -49,26 +55,20 @@
             <scope>provided</scope>
         </dependency>
         
+        <!-- ShopGUIPlus -->
+        <!-- Requires private repository or local installation -->
+        <dependency>
+            <groupId>net.brcdev</groupId>
+            <artifactId>ShopGUIPlus</artifactId>
+            <version>1.53.0</version>
+            <scope>provided</scope>
+        </dependency>
+        
         <!-- UltimateStacker -->
         <dependency>
             <groupId>com.songoda</groupId>
             <artifactId>ultimatestacker</artifactId>
-            <version>2.1.2b</version>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        
-        <!-- ShopGUIPlus -->
-        <!-- Requires local installation -->
-        <dependency>
-            <groupId>net.brcdev</groupId>
-            <artifactId>ShopGUIPlus</artifactId>
-            <version>1.49.0</version>
+            <version>2.1.1</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -78,6 +78,20 @@
             </exclusions>
         </dependency>
     </dependencies>
+    
+    <distributionManagement>
+        <!-- SirBlobman Releases -->
+        <repository>
+            <id>sb-public-releases</id>
+            <url>https://nexus.sirblobman.xyz/repository/public-releases/</url>
+        </repository>
+        
+        <!-- SirBlobman Snapshots -->
+        <snapshotRepository>
+            <id>sb-public-snapshots</id>
+            <url>https://nexus.sirblobman.xyz/repository/public-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     
     <build>
         <finalName>${bukkit.plugin.name}-${bukkit.plugin.version}</finalName>
