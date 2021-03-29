@@ -38,12 +38,6 @@
             <id>sirblobman-private</id>
             <url>https://nexus.sirblobman.xyz/repository/private/</url>
         </repository>
-
-        <!-- Songoda Public Repository -->
-        <repository>
-            <id>songoda</id>
-            <url>https://repo.songoda.com/repository/public/</url>
-        </repository>
     </repositories>
     
     <dependencies>
@@ -56,11 +50,10 @@
         </dependency>
         
         <!-- ShopGUIPlus -->
-        <!-- Requires private repository or local installation -->
         <dependency>
             <groupId>net.brcdev</groupId>
             <artifactId>ShopGUIPlus</artifactId>
-            <version>1.53.0</version>
+            <version>1.55.0</version>
             <scope>provided</scope>
         </dependency>
         
@@ -68,14 +61,8 @@
         <dependency>
             <groupId>com.songoda</groupId>
             <artifactId>UltimateStacker</artifactId>
-            <version>2.1.1</version>
+            <version>2.1.4</version>
             <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
     
