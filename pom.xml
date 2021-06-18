@@ -32,7 +32,13 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-        
+
+        <!-- SirBlobman Public Repository -->
+        <repository>
+            <id>sirblobman-public</id>
+            <url>https://nexus.sirblobman.xyz/repository/public/</url>
+        </repository>
+
         <!-- SirBlobman Private Repository -->
         <repository>
             <id>sirblobman-private</id>
@@ -53,16 +59,28 @@
         <dependency>
             <groupId>net.brcdev</groupId>
             <artifactId>ShopGUIPlus</artifactId>
-            <version>1.59.0</version>
+            <version>1.61.0</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <!-- UltimateStacker -->
         <dependency>
             <groupId>com.songoda</groupId>
             <artifactId>UltimateStacker</artifactId>
-            <version>2.1.4</version>
+            <version>2.1.7</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
     

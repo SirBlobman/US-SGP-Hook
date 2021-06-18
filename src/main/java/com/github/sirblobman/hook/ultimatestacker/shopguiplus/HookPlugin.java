@@ -8,19 +8,17 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class HookPlugin extends JavaPlugin {
+public final class HookPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         Logger logger = getLogger();
-        logger.info("Enabling UltimateStacker ShopGUIPlus Hook...");
-        
-        if(checkHook("ShopGUIPlus")) {
+        if(checkMissingHook("ShopGUIPlus")) {
             logger.warning("Could not find the ShopGUIPlus plugin.");
             setEnabled(false);
             return;
         }
         
-        if(checkHook("UltimateStacker")) {
+        if(checkMissingHook("UltimateStacker")) {
             logger.warning("Could not find the UltimateStacker plugin.");
             setEnabled(false);
             return;
@@ -28,18 +26,9 @@ public class HookPlugin extends JavaPlugin {
         
         HookProvider hookProvider = new HookProvider(this);
         hookProvider.register();
-        
-        logger.info("Successfully enabled UltimateStacker ShopGUIPlus Hook.");
     }
     
-    @Override
-    public void onDisable() {
-        Logger logger = getLogger();
-        logger.info("Disabling UltimateStacker ShopGUIPlus Hook...");
-        logger.info("Successfully disabled UltimateStacker ShopGUIPlus Hook.");
-    }
-    
-    private boolean checkHook(String pluginName) {
+    private boolean checkMissingHook(String pluginName) {
         PluginManager manager = Bukkit.getPluginManager();
         Plugin plugin = manager.getPlugin(pluginName);
         if(plugin == null || !plugin.isEnabled()) return true;

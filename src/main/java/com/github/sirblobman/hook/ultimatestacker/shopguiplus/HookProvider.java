@@ -16,6 +16,7 @@ import net.brcdev.shopgui.spawner.external.provider.ExternalSpawnerProvider;
 
 public final class HookProvider implements ExternalSpawnerProvider {
     private final HookPlugin plugin;
+
     public HookProvider(HookPlugin plugin) {
         this.plugin = Objects.requireNonNull(plugin, "plugin must not be null!");
     }
