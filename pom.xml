@@ -8,6 +8,7 @@
     
     <name>UltimateStacker ShopGUIPlus Hook</name>
     <description>A plugin that adds support for UltimateStacker spawners to ShopGUIPlus.</description>
+    <url>https://www.spigotmc.org/resources/74260/</url>
     
     <properties>
         <java.version>1.8</java.version>
@@ -22,8 +23,7 @@
         <bukkit.plugin.description>${project.description}</bukkit.plugin.description>
         
         <bukkit.plugin.main>com.github.sirblobman.hook.ultimatestacker.shopguiplus.HookPlugin</bukkit.plugin.main>
-        <bukkit.plugin.version>3.0.1</bukkit.plugin.version>
-        <bukkit.plugin.author>SirBlobman</bukkit.plugin.author>
+        <bukkit.plugin.version>3.0.2</bukkit.plugin.version>
     </properties>
     
     <repositories>
