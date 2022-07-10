@@ -38,13 +38,20 @@ public final class HookProvider implements ExternalSpawnerProvider {
     
     @Override
     public EntityType getSpawnerEntityType(ItemStack item) {
-        if(item == null) return null;
+        if(item == null) {
+            return null;
+        }
+
         ItemMeta meta = item.getItemMeta();
-        if(!(meta instanceof BlockStateMeta)) return null;
+        if(!(meta instanceof BlockStateMeta)) {
+            return null;
+        }
 
         BlockStateMeta stateMeta = (BlockStateMeta) meta;
         BlockState state = stateMeta.getBlockState();
-        if(!(state instanceof CreatureSpawner)) return null;
+        if(!(state instanceof CreatureSpawner)) {
+            return null;
+        }
 
         CreatureSpawner spawner = (CreatureSpawner) state;
         return spawner.getSpawnedType();
