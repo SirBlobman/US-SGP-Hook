@@ -25,7 +25,7 @@
         <bukkit.plugin.description>${project.description}</bukkit.plugin.description>
         
         <bukkit.plugin.main>com.github.sirblobman.hook.ultimatestacker.shopguiplus.HookPlugin</bukkit.plugin.main>
-        <bukkit.plugin.version>3.0.3</bukkit.plugin.version>
+        <bukkit.plugin.version>3.0.4</bukkit.plugin.version>
     </properties>
     
     <repositories>
@@ -61,7 +61,7 @@
         <dependency>
             <groupId>net.brcdev</groupId>
             <artifactId>ShopGUIPlus</artifactId>
-            <version>1.77.4</version>
+            <version>1.78.0</version>
             <scope>provided</scope>
         </dependency>
         
