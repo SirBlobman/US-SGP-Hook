@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     options {
-        githubProjectProperty(projectUrlStr: "https://github.com/SirBlobman/ES-SGP-Hook")
+        githubProjectProperty(projectUrlStr: "https://github.com/SirBlobman/US-SGP-Hook")
     }
 
     environment {
@@ -29,7 +29,7 @@ pipeline {
 
     post {
         success {
-            archiveArtifacts artifacts: 'build/libs/ES-SGP-Hook-*.jar', fingerprint: true
+            archiveArtifacts artifacts: 'build/libs/US-SGP-Hook-*.jar', fingerprint: true
         }
 
         always {
