@@ -1,6 +1,8 @@
 package com.github.sirblobman.hook.ultimatestacker.shopguiplus;
 
 import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.bukkit.block.BlockState;
 import org.bukkit.block.CreatureSpawner;
@@ -12,6 +14,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 
 import com.songoda.ultimatestacker.utils.Methods;
 import net.brcdev.shopgui.ShopGuiPlusApi;
+import net.brcdev.shopgui.exception.api.ExternalSpawnerProviderNameConflictException;
 import net.brcdev.shopgui.spawner.external.provider.ExternalSpawnerProvider;
 
 public final class HookProvider implements ExternalSpawnerProvider {
@@ -20,9 +23,18 @@ public final class HookProvider implements ExternalSpawnerProvider {
     public HookProvider(HookPlugin plugin) {
         this.plugin = Objects.requireNonNull(plugin, "plugin must not be null!");
     }
+
+    private HookPlugin getPlugin() {
+        return this.plugin;
+    }
     
     public void register() {
-        ShopGuiPlusApi.registerSpawnerProvider(this);
+        try {
+            ShopGuiPlusApi.registerSpawnerProvider(this);
+        } catch (ExternalSpawnerProviderNameConflictException ex) {
+            Logger logger = getPlugin().getLogger();
+            logger.log(Level.WARNING, "A spawner provider is already registered for UltimateStacker.");
+        }
     }
     
     @Override
