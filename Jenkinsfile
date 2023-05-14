@@ -18,7 +18,7 @@ pipeline {
     }
 
     stages {
-        stage ("Gradle: Build") {
+        stage("Gradle: Build") {
             steps {
                 withGradle {
                     sh("./gradlew --refresh-dependencies --no-daemon clean build")
@@ -35,12 +35,12 @@ pipeline {
         always {
             script {
                 discordSend webhookURL: DISCORD_URL, title: "UltimateStacker ShopGUIPlus Hook",
-                    link: "${env.BUILD_URL}", result: currentBuild.currentResult,
-                    description: """\
+                        link: "${env.BUILD_URL}", result: currentBuild.currentResult,
+                        description: """\
                         **Branch:** ${env.GIT_BRANCH}
                         **Build:** ${env.BUILD_NUMBER}
                         **Status:** ${currentBuild.currentResult}""".stripIndent(),
-                    enableArtifactsList: false, showChangeset: true
+                        enableArtifactsList: false, showChangeset: true
             }
         }
     }

@@ -28,7 +28,7 @@ public final class HookProvider implements ExternalSpawnerProvider {
     private @NotNull HookPlugin getPlugin() {
         return this.plugin;
     }
-    
+
     public void register() {
         try {
             ShopGuiPlusApi.registerSpawnerProvider(this);
@@ -37,33 +37,33 @@ public final class HookProvider implements ExternalSpawnerProvider {
             logger.log(Level.WARNING, "A spawner provider is already registered for UltimateStacker.");
         }
     }
-    
+
     @Override
     public String getName() {
         HookPlugin plugin = getPlugin();
         PluginDescriptionFile description = plugin.getDescription();
         return description.getPrefix();
     }
-    
+
     @Override
     public ItemStack getSpawnerItem(EntityType type) {
         return Methods.getSpawnerItem(type, 1);
     }
-    
+
     @Override
     public EntityType getSpawnerEntityType(ItemStack item) {
-        if(item == null) {
+        if (item == null) {
             return null;
         }
 
         ItemMeta meta = item.getItemMeta();
-        if(!(meta instanceof BlockStateMeta)) {
+        if (!(meta instanceof BlockStateMeta)) {
             return null;
         }
 
         BlockStateMeta stateMeta = (BlockStateMeta) meta;
         BlockState state = stateMeta.getBlockState();
-        if(!(state instanceof CreatureSpawner)) {
+        if (!(state instanceof CreatureSpawner)) {
             return null;
         }
 
