@@ -1,8 +1,9 @@
 package com.github.sirblobman.hook.ultimatestacker.shopguiplus;
 
-import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.jetbrains.annotations.NotNull;
 
 import org.bukkit.block.BlockState;
 import org.bukkit.block.CreatureSpawner;
@@ -20,11 +21,11 @@ import net.brcdev.shopgui.spawner.external.provider.ExternalSpawnerProvider;
 public final class HookProvider implements ExternalSpawnerProvider {
     private final HookPlugin plugin;
 
-    public HookProvider(HookPlugin plugin) {
-        this.plugin = Objects.requireNonNull(plugin, "plugin must not be null!");
+    public HookProvider(@NotNull HookPlugin plugin) {
+        this.plugin = plugin;
     }
 
-    private HookPlugin getPlugin() {
+    private @NotNull HookPlugin getPlugin() {
         return this.plugin;
     }
     
@@ -39,7 +40,8 @@ public final class HookProvider implements ExternalSpawnerProvider {
     
     @Override
     public String getName() {
-        PluginDescriptionFile description = this.plugin.getDescription();
+        HookPlugin plugin = getPlugin();
+        PluginDescriptionFile description = plugin.getDescription();
         return description.getPrefix();
     }
     
