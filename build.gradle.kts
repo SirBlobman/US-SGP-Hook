@@ -52,13 +52,25 @@ dependencies {
 
     // Plugin Dependencies
     compileOnly("com.github.brcdev-minecraft:shopgui-api:3.0.0") // ShopGUIPlus API
-    compileOnly("com.craftaro:UltimateStacker:2.4.3") // UltimateStacker
+    compileOnly("com.songoda:UltimateStacker:2.4.3") // UltimateStacker
 }
 
 
 tasks {
     named<Jar>("jar") {
         archiveBaseName.set("US-SGP-Hook")
+    }
+
+    withType<JavaCompile> {
+        options.encoding = "UTF-8"
+        options.compilerArgs.add("-Xlint:deprecation")
+        options.compilerArgs.add("-Xlint:unchecked")
+    }
+
+    withType<Javadoc> {
+        options.encoding = "UTF-8"
+        val standardOptions = options as StandardJavadocDocletOptions
+        standardOptions.addStringOption("Xdoclint:none", "-quiet")
     }
 
     processResources {

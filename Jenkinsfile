@@ -37,9 +37,9 @@ pipeline {
                 discordSend webhookURL: DISCORD_URL, title: "UltimateStacker ShopGUIPlus Hook",
                         link: "${env.BUILD_URL}", result: currentBuild.currentResult,
                         description: """\
-                        **Branch:** ${env.GIT_BRANCH}
-                        **Build:** ${env.BUILD_NUMBER}
-                        **Status:** ${currentBuild.currentResult}""".stripIndent(),
+                            **Branch:** ${env.GIT_BRANCH}
+                            **Build:** ${env.BUILD_NUMBER}
+                            **Status:** ${currentBuild.currentResult}""".stripIndent(),
                         enableArtifactsList: false, showChangeset: true
             }
         }
