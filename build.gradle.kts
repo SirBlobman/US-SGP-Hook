@@ -52,7 +52,7 @@ dependencies {
 
     // Plugin Dependencies
     compileOnly("com.github.brcdev-minecraft:shopgui-api:3.0.0") // ShopGUIPlus API
-    compileOnly("com.songoda:UltimateStacker:2.4.3") // UltimateStacker
+    compileOnly("com.songoda:UltimateStacker:3.0.0") // UltimateStacker
 }
 
 

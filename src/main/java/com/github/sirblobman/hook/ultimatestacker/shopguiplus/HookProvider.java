@@ -13,7 +13,7 @@ import org.bukkit.inventory.meta.BlockStateMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.PluginDescriptionFile;
 
-import com.songoda.ultimatestacker.utils.Methods;
+import com.craftaro.ultimatestacker.utils.Methods;
 import net.brcdev.shopgui.ShopGuiPlusApi;
 import net.brcdev.shopgui.exception.api.ExternalSpawnerProviderNameConflictException;
 import net.brcdev.shopgui.spawner.external.provider.ExternalSpawnerProvider;
