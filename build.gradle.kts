@@ -48,12 +48,12 @@ repositories {
 
 dependencies {
     // Java Dependencies
-    compileOnly("org.jetbrains:annotations:24.1.0") // JetBrains Annotations
+    compileOnly("org.jetbrains:annotations:26.0.2") // JetBrains Annotations
     compileOnly("org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT") // Spigot API
 
     // Plugin Dependencies
     compileOnly("com.github.brcdev-minecraft:shopgui-api:3.0.0") // ShopGUIPlus API
-    compileOnly("com.songoda:UltimateStacker:3.2.0") // UltimateStacker
+    compileOnly("com.songoda:UltimateStacker-Plugin:4.3.0") // UltimateStacker
 }
 
 
